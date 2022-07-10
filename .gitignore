@@ -1,0 +1,10 @@
+.bloop/
+.metals/
+.vscode/
+target/
+project/
+.DS_Store
+
+checkpoint/
+checkpoints/
+storage/
