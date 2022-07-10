@@ -12,8 +12,8 @@ object RandomReport {
   // A helper function to generate a Report with random citizens, words and position
   def create(droneId: UUID): Report = {
     // Generate a random position uniformly anywhere on Earth
-    val latitude = Random.between(-90, 90)
-    val longitude = Random.between(-180, 180)
+    val latitude = Random.between(-90.0, 90.0)
+    val longitude = Random.between(-180.0, 180.0)
     val coordinates = Coordinates(latitude, longitude)
 
     // Choose a number of Citizens to include in the report between 2 and 4

@@ -77,13 +77,13 @@ object PeaceStateAlertHandler {
         override def open(partitionId: Long, epochId: Long): Boolean = true
 
         override def process(row: Row): Unit = {
-          val citizen = row.getAs[StructType]("citizen")
+          val citizen = row.getAs[Row]("citizen")
 
           printf(s"Drone %s detected citizen %s %s with peace score of %s\n",
             row.getAs[String]("droneId"),
-            citizen("firstName"),
-            citizen("lastName"),
-            row.getAs[Int]("citizen.peaceScore"),
+            citizen.getAs[String]("firstName"),
+            citizen.getAs[String]("lastName"),
+            citizen.getAs[Int]("peaceScore"),
           )
         }
 
