@@ -11,7 +11,7 @@ import org.apache.spark.sql.Row
 import org.apache.spark.sql.ForeachWriter
 import java.sql.Struct
 
-object PeaceStateAlertHandler {
+object AlertHandler {
   // The schema (data structure) of a Report sent as JSON on Kafka
   val schema = new StructType()
       .add("droneId", StringType)

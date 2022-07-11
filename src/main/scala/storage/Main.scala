@@ -10,7 +10,7 @@ import org.apache.spark.sql.types.StructType
 import org.apache.spark.sql.streaming.Trigger
 import org.apache.spark.sql.streaming.OutputMode
 
-object PeaceStateStorage {
+object Storage {
   // The schema (data structure) of a Report sent as JSON on Kafka
   val reportSchema = new StructType()
       .add("droneId", StringType)

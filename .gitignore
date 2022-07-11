@@ -3,10 +3,8 @@
 .metals/
 .vscode/
 
-target/
-project/
-node_modules/
+/target/
+/project/
 
-checkpoint/
-checkpoints/
-storage/
+/checkpoints/
+/storage/

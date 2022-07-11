@@ -15,7 +15,7 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
 
-object Consumer {
+object Statistics {
   // The schema (data structure) of a Report sent as JSON on Kafka
   val reportSchema = new StructType()
       .add("droneId", StringType)
