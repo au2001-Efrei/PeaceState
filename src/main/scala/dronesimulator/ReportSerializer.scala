@@ -13,6 +13,6 @@ class ReportSerializer extends Serializer[Report] {
                 citizen.score
             ).mkString("|") + ";" +
             report.words.mkString("|") + ";" +
-            report.date.toString()
+            (report.date.getTime() / 1000).toString()
         ).getBytes()
 }

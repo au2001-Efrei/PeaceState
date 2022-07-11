@@ -7,7 +7,7 @@ case class CitizenReport(citizen: Citizen, score: Double)
 case class Report(id: UUID, drone: Drone, citizens: List[CitizenReport], words: List[String], date: Date)
 
 object Report {
-  val dictionary = List.fill(1000)(
+  val dictionary = List.fill(100)(
     List.fill(Random.between(3, 11))(
       "abcdefghijklmnopqrstuvwxyz".charAt(Random.nextInt(26))
     ).mkString
@@ -24,6 +24,9 @@ object Report {
       dictionary(Random.nextInt(dictionary.length))
     )
 
-    Report(id, drone, citizens, words, new Date())
+    val offset = Random.between(-7 * 24 * 60 * 60 * 1000, 7 * 24 * 60 * 60 * 1000)
+    val date = new Date(System.currentTimeMillis() + offset)
+
+    Report(id, drone, citizens, words, date)
   }
 }

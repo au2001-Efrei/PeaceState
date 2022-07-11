@@ -41,7 +41,7 @@ object DroneSimulator {
   }
 
   def main(args: Array[String]): Unit = {
-    val drones = List.fill(100)(Drone.random())
+    val drones = List.fill(10)(Drone.random())
 
     val start = System.currentTimeMillis()
 

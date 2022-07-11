@@ -4,7 +4,7 @@ import java.util.UUID
 case class Citizen(id: UUID, name: String)
 
 object Citizen {
-  val population = List.fill(1000)(
+  val population = List.fill(100)(
       Citizen.random()
     )
 
