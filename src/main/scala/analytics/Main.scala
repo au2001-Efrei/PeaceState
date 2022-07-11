@@ -45,7 +45,7 @@ object Analytics {
     val reportStream = spark
       .read
       .schema(reportSchema)
-      .parquet("storage")
+      .parquet("hdfs://localhost:50070/peacestate/reports")
 
     // 1. The proportion of alerts on weekends
     reportStream

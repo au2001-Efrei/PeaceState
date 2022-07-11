@@ -77,7 +77,7 @@ object Storing {
 
     val stream = reportStream.writeStream
       .format("parquet")
-      .option("path", "storage")
+      .option("path", "hdfs://localhost:50070/peacestate/reports")
       .option("checkpointLocation", "checkpoints/storing")
       .start()
 
